@@ -15,20 +15,19 @@ int main()
     
     int ans=2;
     int d = a[1] - a[0];
-    int j = 2;
     int curr =2;
-    while(j<n)
+    for(int i=2; i<n; i++)
     {
-        if(a[j]-a[j-1]==d)
+        if(a[i]-a[i-1]==d)
         curr++;
         else
         {
-            d = a[j]-a[j-1];
+            d = a[i]-a[i-1];
             curr=2;
         }
         if(curr>ans)
         ans=curr;
-        j++;
+        
     }
     cout<<ans<<endl;
     return 0;
